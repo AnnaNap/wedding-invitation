@@ -362,9 +362,10 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/backgrounds/header.gif'); 
+    background-image: none; 
     background-position: center center;
     /*background-position: top center;*/
+    transition: background-image 1.5s ease-in-out;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;

@@ -35,3 +35,31 @@ $('div.modal').on('show.bs.modal', function() {
 		}
 	}
 });
+
+const images = [
+  "{{ site.baseurl }}/img/backgrounds/header/foto1.png",
+  "{{ site.baseurl }}/img/backgrounds/header/foto2.png",
+  "{{ site.baseurl }}/img/backgrounds/header/foto3.png",
+  "{{ site.baseurl }}/img/backgrounds/header/foto4.png",
+  "{{ site.baseurl }}/img/backgrounds/header/foto5.png"
+];
+
+let index = 0;
+const header = document.querySelector("header");
+
+// preload (evita flicker)
+images.forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
+
+function changeBackground() {
+  index = (index + 1) % images.length;
+  header.style.backgroundImage = `url(${images[index]})`;
+}
+
+// iniziale
+header.style.backgroundImage = `url(${images[0]})`;
+
+// cambio ogni 4 secondi
+setInterval(changeBackground, 4000);
