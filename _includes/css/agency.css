@@ -382,7 +382,8 @@ header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     /*font-family: {{ site.data.template.font.secondary }};*/
     /*font-family: {{ site.data.template.font.primary }};*/
-    font-family: 'Lato';
+    font-family: 'stay_classy_sldtregular';
+    text-shadow: 2px 2px 4px #000000;
     font-weight: 300;
     font-size: 22px;
     /*font-style: italic;*/
