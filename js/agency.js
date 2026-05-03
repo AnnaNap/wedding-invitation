@@ -45,6 +45,7 @@ const images = [
   "/wedding-invitation/img/backgrounds/header/foto5.png"
 ];
 
+
   let index = 0;
   const $header = $("header");
 
