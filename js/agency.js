@@ -37,13 +37,13 @@ $('div.modal').on('show.bs.modal', function() {
 });
 $(document).ready(function() {
 
-  const images = [
-    "/img/backgrounds/header/foto1.png",
-    "/img/backgrounds/header/foto2.png",
-    "/img/backgrounds/header/foto3.png",
-    "/img/backgrounds/header/foto4.png",
-    "/img/backgrounds/header/foto5.png"
-  ];
+const images = [
+  "/wedding-invitation/img/backgrounds/header/foto1.png",
+  "/wedding-invitation/img/backgrounds/header/foto2.png",
+  "/wedding-invitation/img/backgrounds/header/foto3.png",
+  "/wedding-invitation/img/backgrounds/header/foto4.png",
+  "/wedding-invitation/img/backgrounds/header/foto5.png"
+];
 
   let index = 0;
   const $header = $("header");
