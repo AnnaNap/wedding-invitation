@@ -36,30 +36,40 @@ $('div.modal').on('show.bs.modal', function() {
 	}
 });
 
-const images = [
-  "{{ site.baseurl }}/img/backgrounds/header/foto1.png",
-  "{{ site.baseurl }}/img/backgrounds/header/foto2.png",
-  "{{ site.baseurl }}/img/backgrounds/header/foto3.png",
-  "{{ site.baseurl }}/img/backgrounds/header/foto4.png",
-  "{{ site.baseurl }}/img/backgrounds/header/foto5.png"
-];
+window.onload = function () {
 
-let index = 0;
-const header = document.querySelector("header");
+  const images = [
+    "{{ site.baseurl }}/img/backgrounds/header/foto1.png",
+    "{{ site.baseurl }}/img/backgrounds/header/foto2.png",
+    "{{ site.baseurl }}/img/backgrounds/header/foto3.png",
+    "{{ site.baseurl }}/img/backgrounds/header/foto4.png",
+    "{{ site.baseurl }}/img/backgrounds/header/foto5.png"
+  ];
 
-// preload (evita flicker)
-images.forEach(src => {
-  const img = new Image();
-  img.src = src;
-});
+  let index = 0;
+  const header = document.querySelector("header");
 
-function changeBackground() {
-  index = (index + 1) % images.length;
-  header.style.backgroundImage = `url(${images[index]})`;
-}
+  if (!header) {
+    console.log("HEADER NON TROVATO");
+    return;
+  }
 
-// iniziale
-header.style.backgroundImage = `url(${images[0]})`;
+  console.log("SLIDESHOW PARTITO");
 
-// cambio ogni 4 secondi
-setInterval(changeBackground, 4000);
+  // preload
+  images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  // iniziale
+  header.style.backgroundImage = `url(${images[0]})`;
+
+  function changeBackground() {
+    index = (index + 1) % images.length;
+    header.style.backgroundImage = `url(${images[index]})`;
+  }
+
+  setInterval(changeBackground, 4000);
+
+};
