@@ -379,7 +379,7 @@ header .intro-text {
 }
 
 header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
+    margin-bottom: 60px;
     margin-top: 25px;
     /*font-family: {{ site.data.template.font.secondary }};*/
     /*font-family: {{ site.data.template.font.primary }};*/
@@ -428,7 +428,7 @@ header .intro-text .intro-heading {
     }
 
     header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
+        margin-bottom: 60px;
         margin-top: 25px;
         /*font-family: {{ site.data.template.font.secondary }};*/
         /*font-family: {{ site.data.template.font.primary }};*/
