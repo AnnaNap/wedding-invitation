@@ -406,7 +406,8 @@ header .intro-text .intro-heading {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/backgrounds/header.gif'); 
+    background-image: none; 
+    transition: background-image 1.5s ease-in-out;
     /*background-position: center center;*/
     background-position: top center;
     background-repeat: none;
