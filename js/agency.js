@@ -35,21 +35,20 @@ $('div.modal').on('show.bs.modal', function() {
 		}
 	}
 });
-
-window.onload = function () {
+$(document).ready(function() {
 
   const images = [
-    "{{ site.baseurl }}/img/backgrounds/header/foto1.png",
-    "{{ site.baseurl }}/img/backgrounds/header/foto2.png",
-    "{{ site.baseurl }}/img/backgrounds/header/foto3.png",
-    "{{ site.baseurl }}/img/backgrounds/header/foto4.png",
-    "{{ site.baseurl }}/img/backgrounds/header/foto5.png"
+    "/img/backgrounds/header/foto1.png",
+    "/img/backgrounds/header/foto2.png",
+    "/img/backgrounds/header/foto3.png",
+    "/img/backgrounds/header/foto4.png",
+    "/img/backgrounds/header/foto5.png"
   ];
 
   let index = 0;
-  const header = document.querySelector("header");
+  const $header = $("header");
 
-  if (!header) {
+  if ($header.length === 0) {
     console.log("HEADER NON TROVATO");
     return;
   }
@@ -63,13 +62,11 @@ window.onload = function () {
   });
 
   // iniziale
-  header.style.backgroundImage = `url(${images[0]})`;
+  $header.css("background-image", `url(${images[0]})`);
 
-  function changeBackground() {
+  setInterval(function () {
     index = (index + 1) % images.length;
-    header.style.backgroundImage = `url(${images[index]})`;
-  }
+    $header.css("background-image", `url(${images[index]})`);
+  }, 4000);
 
-  setInterval(changeBackground, 4000);
-
-};
+});
