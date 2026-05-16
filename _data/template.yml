@@ -1,9 +1,21 @@
 # Color settings (hex-codes without the leading hashtag)
+# color:
+#   primary: f8d56f
+#   secondary: facf6b   
+#   secondary-dark: 333
+#   muted: 777
+
+# color:
+#   primary: 9DAFC1        # blu polvere
+#   secondary: 8B9363      # verde salvia oliva
+#   secondary-dark: 4A4A4A   # testo elegante
+#   muted: 7E7E7E
+
 color:
-  primary: f8d56f
-  secondary: facf6b   
-  secondary-dark: 333
-  muted: 777
+  primary: B7C6D6
+  secondary: A8B39B
+  secondary-dark: 4E4A46
+  muted: 8A8A8A
 
 # Fonf families
 font:
