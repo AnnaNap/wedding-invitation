@@ -1,29 +1,76 @@
 <!-- Venue Section -->
 <section id="venue" class="bg-light-gray">
     <div class="container">
+
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Location</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales arcu enim, et hendrerit nisi pretium blandit. Donec pulvinar vehicula hendrerit. Proin egestas augue libero, in sodales justo molestie sed.</h3>
+
+                <h3 class="section-subheading text-muted">
+                    Villa Senni, immersa nel verde dei Castelli Romani,
+                    sarà la cornice del nostro giorno speciale.
+                </h3>
             </div>
         </div>
+
         <style>
-        .google-maps {
-            position: relative;
-            padding-bottom: 75%; // This is the aspect ratio
-            height: 0;
-            overflow: hidden;
-        }
-        .google-maps iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100% !important;
-            height: 100% !important;
-        }
+            .venue-photo {
+                max-width: 800px;
+                margin: 0 auto 40px auto;
+            }
+
+            .venue-photo img {
+                width: 100%;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            }
+
+            .google-maps {
+                position: relative;
+                width: 80%;
+                max-width: 900px;
+                margin: 0 auto;
+                padding-bottom: 45%;
+                height: 0;
+                overflow: hidden;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            }
+
+            .google-maps iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+            @media(max-width:768px) {
+                .google-maps {
+                    width: 100%;
+                    padding-bottom: 75%;
+                }
+            }
         </style>
 
+        <!-- FOTO -->
+
+        <div class="venue-photo">
+            <img src="{{ site.baseurl }}/img/villa_senni_1.png"
+                 alt="Villa Senni">
+        </div>
+
+        <!-- MAPPA -->
+
         <div class="google-maps">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.12976573395!2d12.639752399999999!3d41.8039649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132586376b7a99e3%3A0x9c1dcd9f3b553aa0!2sVilla%20Senni!5e0!3m2!1sit!2sit!4v1777891753345!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.12976573395!2d12.639752399999999!3d41.8039649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132586376b7a99e3%3A0x9c1dcd9f3b553aa0!2sVilla%20Senni!5e0!3m2!1sit!2sit!4v1777891753345!5m2!1sit!2sit"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
     </div>
 </section>
