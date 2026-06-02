@@ -133,6 +133,38 @@ fieldset[disabled] .btn-primary.active {
     background-color: #fff;
 }
 
+.btn-l {
+    padding: 8px 20px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+
+    border-color: #{{ site.data.template.color.primary }};
+
+    text-transform: uppercase;
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 15px;
+    font-weight: 700;
+
+    color: #fff;
+    background-color: #{{ site.data.template.color.primary }};
+}
+
+.btn-l:hover,
+.btn-l:focus,
+.btn-l:active,
+.btn-l.active,
+.open .dropdown-toggle.btn-l {
+    border-color: #{{ site.data.template.color.primary }};
+    color: #fff;
+    background-color: #{{ site.data.template.color.secondary }};
+}
+
+.btn-l:active,
+.btn-l.active,
+.open .dropdown-toggle.btn-l {
+    background-image: none;
+}
+
 .btn-xl {
     padding: 10px 26px;
     border-radius: 50px;

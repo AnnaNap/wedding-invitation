@@ -37,8 +37,8 @@
                                 IT00 A000 0000 0000 0000 0000 000
                             </span>
 
-                            <button class="copy-btn" onclick="copyIban()">
-                                Copia
+                            <button class="copy-btn" onclick="copyIban()" title="Copia IBAN">
+                                <i class="fa fa-copy"></i>
                             </button>
 
                         </div>
@@ -82,26 +82,40 @@
 
 #iban-text {
     font-family: monospace;
-    font-size: 18px;
+    font-size: clamp(11px, 2vw, 18px);
     letter-spacing: 1px;
-    word-break: break-all;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    flex: 1;
+    text-align: left;
 }
 
 .copy-btn {
+    width: 42px;
+    height: 42px;
+
     border: none;
-    border-radius: 6px;
+    border-radius: 50%;
 
-    padding: 10px 18px;
-
-    background: #a7b8a0;
+    background: #{{ site.data.template.color.primary }};
     color: white;
 
     cursor: pointer;
-    transition: opacity .2s;
+    flex-shrink: 0;
+
+    transition: all .2s ease;
 }
 
 .copy-btn:hover {
-    opacity: 0.85;
+    background: #{{ site.data.template.color.secondary }};
+    transform: scale(1.05);
+}
+
+.copy-btn i {
+    font-size: 16px;
 }
 
 </style>
@@ -114,7 +128,6 @@ function copyIban() {
 
     navigator.clipboard.writeText(iban);
 
-    alert("IBAN copiato negli appunti");
 }
 </script>
 
