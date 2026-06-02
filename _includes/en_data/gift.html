@@ -1,8 +1,3 @@
----
-layout: default
-title: Lista Nozze
----
-
 <section id="gift">
     <div class="container">
 
@@ -11,26 +6,44 @@ title: Lista Nozze
 
                 <h2 class="section-heading">Lista Nozze</h2>
 
-                <p class="text-muted">
-                    La vostra presenza sarà il regalo più bello.
-                    Se desiderate contribuire al nostro viaggio e ai nostri progetti futuri,
-                    potrete farlo tramite bonifico.
-                </p>
+                <div class="col-lg-8 col-lg-offset-2">
 
-                <div class="gift-card">
-
-                    <h4>Intestatari</h4>
-
-                    <p>
-                        Annalisa Cognome<br>
-                        Marco Cognome
+                    <p class="large text-muted">
+                        La vostra presenza sarà il regalo più bello e il modo più speciale per condividere con noi questa giornata.
                     </p>
 
-                    <h4>IBAN</h4>
-
-                    <p id="iban-text">
-                        IT00A0000000000000000000000
+                    <p class="large text-muted">
+                        Se desiderate farci un regalo, potete contribuire ai nostri progetti futuri, alle prossime avventure e a qualche nuova storia da raccontare.
                     </p>
+
+                    <p class="large text-muted" style="margin-bottom:40px;">
+                        Grazie di cuore per l'affetto e la generosità con cui ci accompagnerete in questo nuovo capitolo della nostra vita.
+                    </p>
+
+                    <div class="gift-card">
+
+                        <h4>Intestatari</h4>
+
+                        <p>
+                            Annalisa Cognome<br>
+                            Marco Cognome
+                        </p>
+
+                        <h4>IBAN</h4>
+
+                        <div class="iban-box">
+
+                            <span id="iban-text">
+                                IT00 A000 0000 0000 0000 0000 000
+                            </span>
+
+                            <button class="copy-btn" onclick="copyIban()">
+                                Copia
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -39,3 +52,69 @@ title: Lista Nozze
 
     </div>
 </section>
+
+<style>
+
+.gift-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 35px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.iban-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-top: 15px;
+    padding: 15px 20px;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+
+    background: #fafafa;
+}
+
+#iban-text {
+    font-family: monospace;
+    font-size: 18px;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+
+.copy-btn {
+    border: none;
+    border-radius: 6px;
+
+    padding: 10px 18px;
+
+    background: #a7b8a0;
+    color: white;
+
+    cursor: pointer;
+    transition: opacity .2s;
+}
+
+.copy-btn:hover {
+    opacity: 0.85;
+}
+
+</style>
+
+<script>
+function copyIban() {
+
+    const iban =
+        document.getElementById("iban-text").innerText;
+
+    navigator.clipboard.writeText(iban);
+
+    alert("IBAN copiato negli appunti");
+}
+</script>
+

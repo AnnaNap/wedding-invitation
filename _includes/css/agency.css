@@ -20,12 +20,12 @@ body {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.75;
 }
 
 .plist {
-    font-size: 14px;
+    font-size: 16px;
     white-space: pre-wrap; /* CSS3 */    
     white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
     white-space: -pre-wrap; /* Opera 4-6 */    
@@ -34,11 +34,11 @@ p {
 }
 
 p.large {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 p.largepad {
-    font-size: 16px;
+    font-size: 18px;
     padding-bottom: 25px;
 }
 
