@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Annalisa e Marco//RSVP Reminder//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+
+BEGIN:VEVENT
+UID:rsvp-annalisa-marco-2026
+DTSTAMP:20250720T120000Z
+DTSTART;VALUE=DATE:20260620
+DTEND;VALUE=DATE:20260621
+
+SUMMARY:Ultimo giorno per confermare la presenza
+DESCRIPTION:Ricordati di confermare la tua presenza al matrimonio di Annalisa e Marco entro oggi.
+
+END:VEVENT
+
+END:VCALENDAR
