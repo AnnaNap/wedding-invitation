@@ -34,7 +34,7 @@
                         <div class="iban-box">
 
                             <span id="iban-text">
-                                IT00 A000 0000 0000 0000 0000 000
+                                IT00A0000000000000000000000
                             </span>
 
                             <button class="copy-btn" onclick="copyIban()" title="Copia IBAN">
@@ -68,8 +68,8 @@
 .iban-box {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 15px;
+
+    width: 100%;
 
     margin-top: 15px;
     padding: 15px 20px;
@@ -81,21 +81,26 @@
 }
 
 #iban-text {
+    flex: 1;
+
+    min-width: 0;
+
     font-family: monospace;
     font-size: clamp(11px, 2vw, 18px);
-    letter-spacing: 1px;
 
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    flex: 1;
     text-align: left;
+
+    letter-spacing: 0;
 }
 
 .copy-btn {
+    margin-left: 12px;
+
     width: 42px;
     height: 42px;
+
+    flex-shrink: 0;
 
     border: none;
     border-radius: 50%;
@@ -104,18 +109,10 @@
     color: white;
 
     cursor: pointer;
-    flex-shrink: 0;
-
-    transition: all .2s ease;
 }
 
 .copy-btn:hover {
     background: #{{ site.data.template.color.secondary }};
-    transform: scale(1.05);
-}
-
-.copy-btn i {
-    font-size: 16px;
 }
 
 </style>
